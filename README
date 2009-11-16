@@ -1,0 +1,54 @@
+x2vnc
+------------------------------------------
+This program will let you use two screens on two different computers as 
+if they were connected to the same computer. Even if one of the 
+computers runs Windows 95/98/NT and the other one runs X-windows.
+
+Runtime requirements:
+  cygwin-1.7.0-62
+  libgcc1-4.3.4-1
+  libX11_6-1.3.2-1
+  libXinerama1-1.1-1
+  libXrandr2-1.3.0-10
+  libXss1-1.2.0-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  autoconf2.5-2.63-10
+  automake1.10-1.10.2-10
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-1
+  make-3.81-2
+  sed-4.1.5-2
+
+Canonical website:
+  http://fredrik.hubbe.net/x2vnc.html
+
+Canonical download:
+  http://fredrik.hubbe.net/x2vnc/
+
+-------------------------------------------
+
+Build instructions:
+  unpack x2vnc-1.7.2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./x2vnc-1.7.2-X.cygport all
+
+This will create:
+  /usr/src/x2vnc-1.7.2-X-src.tar.bz2
+  /usr/src/x2vnc-1.7.2-X.tar.bz2
+
+-------------------------------------------
+
+Port Notes:
+
+----- version 1.7.2-1 -----
+Initial release for Cygwin 1.7.
+
+
+Cygwin port maintained by:
+http://sourceware.org/cygwinports/

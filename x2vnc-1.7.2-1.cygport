@@ -1,0 +1,9 @@
+DESCRIPTION="Control another computer with VNC as if it were a second screen"
+HOMEPAGE="http://fredrik.hubbe.net/x2vnc.html"
+SRC_URI="http://fredrik.hubbe.net/x2vnc/${P}.tar.gz"
+PATCH_URI="1.7.2-vpath.patch"
+
+src_install() {
+	dobin ${B}/x2vnc.exe
+	newman ${S}/x2vnc.man x2vnc.1
+}

@@ -1,0 +1,13 @@
+--- origsrc/x2vnc-1.7.2/Makefile.in	2003-11-13 01:38:19.000000000 -0600
++++ src/x2vnc-1.7.2/Makefile.in	2009-11-15 20:18:58.362294200 -0600
+@@ -1,6 +1,9 @@
+ @SET_MAKE@
+ @makefile_top@
+-CFLAGS=$(INCLUDES) @CFLAGS@ @CPPFLAGS@ @DEFS@
++srcdir=@srcdir@
++VPATH=$(srcdir)
++
++CFLAGS=$(INCLUDES) -I$(srcdir) @CFLAGS@ @CPPFLAGS@ @DEFS@
+ LDFLAGS=@LDFLAGS@ 
+ LIBS=@LIBS@ $(LDLIBS)
+ CC=@CC@
