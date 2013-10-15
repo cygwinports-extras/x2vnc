@@ -1,0 +1,30 @@
+--- origsrc/x2vnc-1.7.2/rfbproto.c	2005-12-09 00:37:41.000000000 -0600
++++ src/x2vnc-1.7.2/rfbproto.c	2013-10-15 03:27:09.384784700 -0500
+@@ -23,6 +23,7 @@
+  * rfbproto.c - functions to deal with client side of RFB protocol.
+  */
+ 
++#include <ctype.h>
+ #include <unistd.h>
+ #include <sys/types.h>
+ #include <errno.h>
+--- origsrc/x2vnc-1.7.2/sockets.c	2006-05-19 23:23:38.000000000 -0500
++++ src/x2vnc-1.7.2/sockets.c	2013-10-15 03:28:03.446876900 -0500
+@@ -31,6 +31,7 @@
+ #include <x2vnc.h>
+ 
+ void PrintInHex(char *buf, int len);
++int tunnel(char *gatewayhost, char *remotehost, int remoteport);
+ 
+ Bool errorMessageFromReadExact = True;
+ Bool useSSHTunnel;
+--- origsrc/x2vnc-1.7.2/vncauth.c	2005-12-09 00:37:41.000000000 -0600
++++ src/x2vnc-1.7.2/vncauth.c	2013-10-15 03:28:40.052970600 -0500
+@@ -26,6 +26,7 @@
+ #include <string.h>
+ #include <sys/types.h>
+ #include <sys/stat.h>
++#include <unistd.h>
+ #include <vncauth.h>
+ #include <d3des.h>
+ 

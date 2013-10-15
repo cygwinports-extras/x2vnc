@@ -1,0 +1,19 @@
+NAME="x2vnc"
+VERSION=1.7.2
+RELEASE=1
+CATEGORY="X11"
+SUMMARY="Control another computer with VNC as if it were a second screen"
+DESCRIPTION="This program will let you use two screens on two different
+computers as if they were connected to the same computer. Even if one of
+the computers runs Windows 95/98/NT and the other one runs X-windows."
+HOMEPAGE="http://fredrik.hubbe.net/x2vnc.html"
+SRC_URI="http://fredrik.hubbe.net/x2vnc/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="
+	1.7.2-vpath.patch
+	1.7.2-implicit-decls.patch
+"
+
+src_install() {
+	dobin ${B}/x2vnc.exe
+	newman ${S}/x2vnc.man x2vnc.1
+}
